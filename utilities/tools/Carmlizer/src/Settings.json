@@ -1,7 +1,7 @@
 {
   "RelocationSettings": {
     "IncludeWorkloadSubscriptionId": [
-      "337b38b9-54ed-4cf7-aa4e-aa17afd0e128"
+      "6e74621a-b3ca-4233-b10a-19367338e576"
     ],
     "SkipResourceType": [
       "microsoft.alertsmanagement/smartDetectorAlertRules",
@@ -11,13 +11,6 @@
       "Microsoft.VSOnline/plans"   
     ],
     "SkipResourceGroup": [
-      "artifacts-rg",
-      "carml-poc",
-      "cloud-shell-storage-centralindia",
-      "DefaultResourceGroup-EUS",
-      "DefaultResourceGroup-WEU",
-      "NetworkWatcherRG",
-      "validation-rg"
     ],
     "ValidationSubscriptionId": "337b38b9-54ed-4cf7-aa4e-aa17afd0e128",    
     "LogPath": "src/ExceptionsLog.json",
