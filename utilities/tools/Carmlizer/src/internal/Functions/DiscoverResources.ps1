@@ -56,9 +56,9 @@ function DiscoverResources {
             $resourceGroupTemplatePath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath "$($resourceGroup.ResourceGroupName).deploy.json"
             $resourceGroupParameterTypePath = Join-Path -Path $resourceGroupParametersFolderPath -ChildPath "$($resourceGroup.ResourceGroupName).parameters.json"
             ## Exporting template to the processed location
-            Curated-ExportedARM -exportedArmLocation "$tmplocation/$($resourceGroup.ResourceGroupName).deploy.json" -proccessedArmLocation $resourceGroupTemplatePath
+            #Curated-ExportedARM -exportedArmLocation "$tmplocation/$($resourceGroup.ResourceGroupName).deploy.json" -proccessedArmLocation $resourceGroupTemplatePath
             ## Exporting ARM parameters to the processed location from temp
-            Generate-ARMParameters -exportedArmLocation $resourceGroupTemplatePath -proccessedArmLocation $resourceGroupParameterTypePath
+            #Generate-ARMParameters -exportedArmLocation $resourceGroupTemplatePath -proccessedArmLocation $resourceGroupParameterTypePath
 
             foreach ($resource in $resources) {
                 $resourceType = $resource.ResourceType
