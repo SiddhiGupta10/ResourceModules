@@ -60,13 +60,13 @@ jobs:
           try{
             Write-Output "1. New branch name received: '${{ env.newbranchname }}'"
             $Env:PSModulePath = $Env:PSModulePath, '${{ env.modulesFolder }}' -join [IO.Path]::PathSeparator
-            Import-Module ./utilities/tools/Carmlizer/src/internal/Functions/DiscoverResources.ps1 -Force
-            Import-Module ./utilities/tools/Carmlizer/src/internal/Functions/Update-FolderStructureInJson.ps1 -Force
-            Import-Module ./utilities/tools/Carmlizer/src/internal/Functions/Modify-SettingFileName.ps1 -Force
-            Import-Module ./utilities/tools/Carmlizer/src/Get-CARMLPull.ps1 -Force
-            Import-Module ./utilities/tools/Carmlizer/src/internal/Functions/Convert-ARMToBicepParameters.ps1 -Force
+            Import-Module /utilities/tools/Carmlizer/src/internal/Functions/DiscoverResources.ps1 -Force
+            Import-Module /utilities/tools/Carmlizer/src/internal/Functions/Update-FolderStructureInJson.ps1 -Force
+            Import-Module /utilities/tools/Carmlizer/src/internal/Functions/Modify-SettingFileName.ps1 -Force
+            Import-Module /utilities/tools/Carmlizer/src/Get-CARMLPull.ps1 -Force
+            Import-Module /utilities/tools/Carmlizer/src/internal/Functions/Convert-ARMToBicepParameters.ps1 -Force
 
-            $settingfile=get-content -path $pwd/utilities/tools/Carmlizer/src/Settings.json
+            $settingfile=get-content -path /utilities/tools/Carmlizer/src/Settings.json
             $IncludeWorkloadSubscriptionId=($settingfile | ConvertFrom-Json).RelocationSettings.IncludeWorkloadSubscriptionId
             foreach($subscriptionid in $IncludeWorkloadSubscriptionId)
             {
