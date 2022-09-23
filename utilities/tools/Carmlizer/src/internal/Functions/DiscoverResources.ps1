@@ -29,7 +29,7 @@ function DiscoverResources {
                 New-Item -Path $resourceGroupPath -ItemType Directory
             }
             $resourceGroupArm = Get-AzResourceGroup -Name $resourceGroup.ResourceGroupName | Select-Object ResourceGroupName, Location, Tags
-            $jqJsonTemplate = Join-Path -Path $statePath -ChildPath 'src/data/resourceGroups.template.jq'
+            $jqJsonTemplate = Join-Path -Path $statePath -ChildPath 'utilities/tools/Carmlizer/src/data/resourceGroups.template.jq'
             ## Using jq since export-template doesn't work for Resource Groups
             $resourceGroupArm | Add-Member -Name 'ApiVersion' -MemberType NoteProperty -Value $resourceGroupApiVersion
             $object = ($resourceGroupArm | ConvertTo-Json -Depth 100 -EnumsAsStrings | jq -r -f $jqJsonTemplate | ConvertFrom-Json)
