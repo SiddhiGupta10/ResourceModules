@@ -96,8 +96,8 @@ jobs:
             git pull origin ${{ env.newbranchname }}
             
             Write-Verbose "GIT ADD..." -Verbose
-            git add "${{ env.WorkloadFolderName }}/" $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/src/"${{ env.WorkloadFolderName }}"_Settings.json
-            git add .
+            git add $env:GITHUB_WORKSPACE/${{ env.WorkloadFolderName }}/ $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/src/"${{ env.WorkloadFolderName }}"_Settings.json
+            
             Write-Verbose "GIT REMOVE..." -Verbose
             git rm $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/utilities/tools/Carmlizer/src/Settings.json
 
