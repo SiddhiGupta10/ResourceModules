@@ -11,6 +11,13 @@
       "Microsoft.VSOnline/plans"   
     ],
     "SkipResourceGroup": [
+      "artifacts-rg",
+      "carml-poc",
+      "cloud-shell-storage-centralindia",
+      "DefaultResourceGroup-EUS",
+      "DefaultResourceGroup-WEU",
+      "NetworkWatcherRG",
+      "validation-rg"
     ],
     "ValidationSubscriptionId": "337b38b9-54ed-4cf7-aa4e-aa17afd0e128",    
     "LogPath": "src/ExceptionsLog.json",
