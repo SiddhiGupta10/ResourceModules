@@ -94,10 +94,10 @@ jobs:
 
             Write-Verbose "git pull...." -Verbose
             git pull origin ${{ env.newbranchname }}
-
+            
             Write-Verbose "GIT ADD..." -Verbose
             git add "${{ env.WorkloadFolderName }}/" $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/src/"${{ env.WorkloadFolderName }}"_Settings.json
-
+            git add .
             Write-Verbose "GIT REMOVE..." -Verbose
             git rm $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/utilities/tools/Carmlizer/src/Settings.json
 
