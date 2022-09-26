@@ -5,5 +5,12 @@
     "ScriptPath": "/home/runner/work/_temp/14c9b062-d4c1-49a4-a0e7-fdc61f25c989.ps1",
     "Time": "Friday, 23 September 2022 11:15:05",
     "Result": "Failed"
+  },
+  "Pull-Pipeline_c782a706-1022-4ddf-ab54-9e3e80bd95a7": {
+    "ScriptPath": "/home/runner/work/_temp/c782a706-1022-4ddf-ab54-9e3e80bd95a7.ps1",
+    "Exception": "A parameter cannot be found that matches parameter name 'resourceType'.",
+    "Result": "Failed",
+    "Name": "Pull-Pipeline_c782a706-1022-4ddf-ab54-9e3e80bd95a7",
+    "Time": "Monday, 26 September 2022 13:08:38"
   }
 }
